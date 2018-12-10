@@ -1,0 +1,47 @@
+[
+    {
+        "name" : "Ram",
+        "email":"ram@gmail.com",
+        "address":{
+            "city":"Hyderabad",
+            "state":"Telangana",
+            "country":"India"
+        },
+        "college":"Loyola Academy",
+        "college_address":{
+            "city":"Hyderabad",
+            "state":"Telangana",
+            "pincode":"500025"
+        }
+    },
+    {
+        "name" : "Raju",
+        "email":"raju@gmail.com",
+        "address":{
+            "city":"Delhi",
+            "state":"Delhi",
+            "country":"India"
+        },
+        "college":"ABC Academy",
+        "college_address":{
+            "city":"Hyderabad",
+            "state":"Telangana",
+            "pincode":"500025"
+        }
+    },
+    {
+        "name" : "Ravi",
+        "email":"ravi@gmail.com",
+        "address":{
+            "city":"Hyderabad",
+            "state":"Telangana",
+            "country":"India"
+        },
+        "college":"XYZ Academy",
+        "college_address":{
+            "city":"Mumbai",
+            "state":"Maharastra",
+            "pincode":"500012"
+        }
+    }
+]
