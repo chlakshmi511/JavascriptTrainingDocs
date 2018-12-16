@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <p>click the button to conert the array in to a string</p>
+  <button onClick="myClick()">try it</button>
+  <p id="demo">welcome Name List </p>
+  <p id="demo1">welcome Name List </p>
+  <p id="demo2">welcome Name List </p>
+  <p id="demo3">welcome Name List </p>
+
+</body>
+<script>
+   function myClick(){
+       var nameList =["A","B","c","D","E"];
+       //toString method : conert the array in to a string
+       //array.toString()
+       nameList.toString();
+       document.getElementById("demo").innerHTML = nameList;   
+
+       //splice method
+       nameList.splice(2,1,"F","G","H");
+       document.getElementById("demo1").innerHTML = nameList; 
+
+       nameList.splice(2,1);
+       document.getElementById("demo2").innerHTML = nameList; 
+
+       //slice method
+        var newNameList = nameList.slice(2,3);//a,b,g,h,d,e
+       document.getElementById("demo3").innerHTML = newNameList; 
+       
+       //list out the array methods
+       /*
+        isArray()
+        concat()
+        copyWithIn()
+        fill()
+        filter()
+        find()
+        findIndex()
+        inCludes()
+        indexOf()
+        join()
+        keys()
+        lastIndexOf()
+        pop()
+        push()
+        shift()
+        unShift()
+        values()
+        toString()
+       */
+       }
+</script>
+</html>

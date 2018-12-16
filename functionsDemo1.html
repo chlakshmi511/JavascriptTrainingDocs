@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+           function showMsg(){
+               alert("show messAGES..")
+           }
+
+
+           
+            
+           function showSum(a,b){
+               alert("sum is "+ (a+b).toString());
+           }
+           //by using predefined arguments.length :
+           function showArgumentsSum(){
+               var s=0;
+               for(var i=0;i<arguments.length;i++){
+                   s+= arguments[i];//s=s+arguments[i]// s=0+10;s=10
+                   //s=10+20
+               }
+              alert("total sum of arguments is "+s);
+           }
+           function showDifference(a,b){
+               var c = b-a;
+               return c;
+           }
+        </script>
+</head>
+<body>
+   <input type="button" value="showMsg" onclick="showMsg()"/>
+   <input type="button" value="SHOW SUM" onclick="showSum(10,20)"/>
+   <input type="button" value="TotalArgumentsSum" onclick="showArgumentsSum(10,20,30,40,50)"/>
+   
+   <input type="button" value="show Differnce" onclick="alert(showDifference(10,20));"/>
+   
+
+</body>
+</html>

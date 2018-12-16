@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       //callback functions 
+       function doProcess(a,b,showDiffernce){
+           alert("sum is :"+(a+b).toString());
+          showDiffernce(a,b);
+       }
+
+       function showDiffernce(p,q){
+        alert("diifference is "+(p-q).toString());
+
+       }
+       function showMultiflication(p,q){
+        alert("Product  is "+(p*q).toString());
+
+       }
+    </script>
+</head>
+<body>
+    <input type="button" value="SHOW" onclick="doProcess(10,20,showDiffernce);"/>
+    <input type="button" value="Another SHOW" onclick="doProcess(30,40,showMultiflication);"/>
+    <input type="button" value="Just Another SHOW" 
+    onclick="doProcess(30,40,function(p,q){alert('diff is'+(p-q));})"/>
+</body>
+</html>

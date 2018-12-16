@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <button type="button" value="showArray" onclick="dispalyArray()">showArray</button>
+    <div id ="resultsDiv"> </div>
+</body>
+<!---<script src="js/arrayConcept2.js"></script>-->
+<script>
+//declaring an Array
+var arr1 = Array(4);
+var arr2= Array("a",123);
+var arr3=["1",true];
+var arr4 = new Array(1,2);
+arr4 instanceof(Array);
+var s="pardu";
+var s1= new String();
+s1 instanceof String
+var p = new Family("pardu");
+p instanceof Family;
+//Assigning values to an annary by using index
+arr1[0]="john";
+arr1[1]=2500;
+arr1[2]=true;
+arr1[3]=67.5;
+
+
+//function declararion for accessing and printing array elemnts in the console 
+var resultsDiv = document.getElementById("resultsDiv");
+
+function dispalyArray(){
+    for (var i=0;i<arr1.length;i++){
+        //creating a new div 
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML ="item" + (i+1).toString() +"of"+arr1.length.toString()+ "is " + arr1[i];
+        //adding childdiv to parent div
+        resultsDiv.appendChild(newDiv);
+    }
+}
+</script>
+</html>

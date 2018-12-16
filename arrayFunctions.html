@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       //functions to be declared as arrat functions
+       var ary = [];
+       ary[0] = function(){
+           alert("first ")
+       }
+       ary[1] = function(){
+           alert("second ")
+       }
+       ary[2] = function(){
+           alert("third ")
+       }
+       ary[3] = function(){
+           alert("fourth ")
+       }
+       //calling array functions   
+      for(var i=0;i<ary.length;i++){
+         // var p = ary[i]=> ary[0]=function(){alert("first");}//its having function defintion ary[0] and so on 
+         // p();//executing
+
+          //or  ( insteading assigning a function def to a variable directly assign and execute by using i.e,)
+          ary[i]();
+      }
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

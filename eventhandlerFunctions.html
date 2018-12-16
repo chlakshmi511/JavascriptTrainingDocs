@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+         function attachEvent(){
+             var dummyBtn =document.getElementById("dummyBtn");
+             dummyBtn.onclick = function(){
+                 //dummyBtn.onclick is the event
+                 //function(){} eventhandler of anonymous function
+                 alert("hiii");
+             }
+             dummyBtn.value = "i am not dummy btn ";
+         }
+    </script>
+</head>
+<body>
+<input id ="dummyBtn" value=" this button is dummy" type="button"/>
+<input id="btnDo" value = "attach event now" type="button" onclick="attachEvent();"/>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+       //nested functions 
+       function doProcess(a,b){
+           function showSum(){
+           alert("sum is +"+(a+b).toString());
+           }
+           function showDiffernce(){
+           alert("diifference is "+(a-b).toString());
+           } 
+           //calling innerfunctions
+           showDiffernce();
+           showSum();     
+         }
+       
+    doProcess(10,20);
+    showSum();//getting an error inner function  scope is not accessible outside of  the function
+    </script>
+</head>
+<body>
+<!--input type="button" value="SHOW" onclick="doProcess(10,20);"/>-->
+    
+</body>
+</html>

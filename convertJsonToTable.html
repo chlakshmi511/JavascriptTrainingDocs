@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    table, th, td 
+    {
+        margin:10px 0;
+        border:solid 1px #333;
+        padding:2px 4px;
+        font:15px Verdana;
+    }
+    th {
+        font-weight:bold;
+    }
+</style>
+</head>
+<body>
+  <textarea id="myTxtArea" cols="70" rows="20"></textarea>
+  <hr/>
+  <button type ="button" value="convert json to table" onclick="convertJsonDataToTable();">convert json to table</button>
+ <div id = "resultDiv"></div>
+
+</body>
+<!--<script src="js/test1.js"></script>-->
+<script>
+var emps = [
+    {
+        "eno":10,
+        "ename":"Lakshmi",
+        "Company":"IBM"
+    },
+    {
+        "eno":20,
+        "ename":"Nymisha",
+        "Company":"TS"
+    },
+    {
+        "eno":10,
+        "ename":"Zesan",
+        "Company":"IBM"
+    }
+
+];
+document.getElementById("myTxtArea").value = JSON.stringify(emps);
+ function convertJsonDataToTable(){
+    
+    var newElement= document.getElementById("myTxtArea").value;
+     newElement=JSON.parse(newElement);
+     
+     //1st method
+     var newDiv = "<table>";
+    for(var i = 0;i < Object.keys(newElement).length;i++){
+     
+   newDiv+= "<tr><td>"+newElement[i].eno+"</td><td>"+newElement[i].ename+"</td><td>"+newElement[i].Company+"</td></tr>";
+   document.getElementById("resultDiv").innerHTML = newDiv
+    }
+    newDiv+= "</table>";
+
+
+  
+ }
+
+</script>
+</html>

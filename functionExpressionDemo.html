@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+            //function expressions
+           var showMsg =  function(){
+               alert("show messAGES..")
+           } 
+
+           var f2 = function (a,b){
+               alert("sum is "+ (a+b).toString());
+           }
+           //by using predefined arguments.length :
+           var f3 = function (){
+               var s=0;
+               for(var i=0;i<arguments.length;i++){
+                   s+= arguments[i];
+               }
+              alert("total sum of arguments is "+s);
+           }
+           var f4 = function (a,b){
+               var c = b-a;
+               return c;
+           }
+        </script>
+</head>
+<body>
+   <input type="button" value="showMsg" onclick="showMsg()"/>
+   <input type="button" value="SHOW SUM" onclick="f2(10,20)"/>
+   <input type="button" value="TotalArgumentsSum" onclick="f3(10,20,30,40,50)"/>
+   
+   <input type="button" value="show Differnce" onclick="alert(f4(10,20));"/>
+   
+
+</body>
+</html>
