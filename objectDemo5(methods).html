@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       var emp  = function(){
+        this.ename = " ";
+           this.sal =0;
+           this.setEmployee = function(o){
+               this.ename = o.ename;
+               this.sal = o.sal;
+           }
+           this.getAnnualSal = function(){
+               return this.sal*2;
+           } 
+       }
+       var empObj1 = new emp();
+       empObj1.ename = "lakshmi";
+       empObj1.sal = 80000;
+
+       var empObj2 = new emp(empObj1);
+       empObj2.setEmployee(empObj1);
+
+       alert(empObj2.ename+"earns  "+empObj2.getAnnualSal()+" Pm");
+    </script>
+</head>
+<body></body>
+</html>

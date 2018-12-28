@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+      var Emp = function(vEname,vSal){
+          this.ename = vEname;
+          this.sal = vSal;
+          this.incrementSalary = function(vinc){
+              this.sal+= vinc;
+              //this.sal = this.sal+vinc;
+              console.log(this);
+              return this;
+
+          }
+      }
+      var oemp = new Emp("Lakshmi",8000)
+      //alert(oemp.sal);
+      //alert(oemp.incrementSalary(500).sal);
+      alert(oemp.incrementSalary(500).incrementSalary(500).sal);
+
+    </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+      //methods
+      //writing a external function
+      function getAnnual(){
+         return this.sal*2;
+      }
+      var oemp = {
+          eno:1001,
+          ename:"jag",
+          sal:20000,
+          annualSal : getAnnual//get the definition of getAnnual
+      }
+         
+      alert(oemp.ename +"  earns  "+oemp.annualSal()+"per annum");
+
+
+
+      //anonymous function
+
+      var oemp2 = {
+          ename:"jag",
+          sal:30000,
+          annualSal : function(){
+            return this.sal*2;}
+            ,
+        quarterSal : function(){
+            return this.sal/2;
+        }
+          
+      };
+      alert(oemp2.ename + " earns  "+ oemp2.annualSal() + " per annum "+" ,"+oemp2.quarterSal()+" per quater");
+       
+
+      //calling inside a constructor
+      var oemp3 =function (vename,vsal){
+          this.ename =vename;
+          this.sal =vsal;
+           this.getAnnualSal= function(){
+              return this.sal * 2;
+          };
+          this.getQuaterSal = function(){
+              return this.sal / 4;
+          }
+        var emp11 = new oemp3("jag",40000);
+         alert( "earns "+ emp11.getAnnualSal() + "PA" + emp11.getQuaterSal()+"Per annual ");
+      }
+    </script>
+</head>
+<body></body>
+</html>

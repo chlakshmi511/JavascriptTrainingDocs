@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+         //create another constructor function 
+         var Dept= function(vDeptNo,vDname){
+             this.deptno = vDeptNo;
+             this.dname= vDname;
+         }
+        var emp ={
+            eno :1001,
+            ename : "lakshmi",
+            //nested object creation
+            dept : {
+                deptNo:10,
+                deptName : "It"
+            }
+            
+        }
+
+        alert(emp.ename + " works in "+ emp.dept.deptName);
+
+        //nestedobjects in side constructor
+        var emp1 = function(vSal ,vEname,vDeptNo ,vDname){
+            this.sal= vSal;
+            this.ename = vEname;
+
+            //nestedobject
+           this.dept ={
+               deptno : vDeptNo,
+               dname  : vDname,
+               deptNameFull:function(){
+                   console.log(this);
+               }
+            }
+            
+            this.department = new Dept(vDeptNo,vDname);
+        }
+         var oemp = new emp1(100000,"Lakshmi",10,"it")
+         alert(oemp.ename + " workis iimn "+oemp.dept.dname + ""+oemp.department.dname);
+        // alert(oemp.ename + " workis iimn "+oemp.department.dname);
+
+
+        
+     </script>
+</head>
+<body></body>
+</html>

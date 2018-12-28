@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       var emp  = function(vename,vsal){
+           this.ename = vename;
+           this.sal = vsal;
+         
+           this.getAnnualSal = function(){
+               return this.sal*10;
+           }
+       }
+       var ary = [];
+       ary[0]= new emp("Lakshmi",9000);
+       ary[1]= new emp("berry",8000);
+       ary[2]= new emp("nymisha",7000);
+       ary[3]= new emp("maruthi",6000);
+       ary[4]= new emp("zesan",5000);
+
+       for(var i=0;i<ary.length;i++){
+           alert(ary[i].ename + " earns salary  " + ary[i].getAnnualSal() + " PM");
+       }
+    </script>
+</head>
+<body></body>
+</html>

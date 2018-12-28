@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        
+       var Emp = function(vEname , vEsal){
+           this.ename =vEname;
+            var sal = vEsal;
+           this.annualSalary = 0.0;
+           
+           this.calculateAnnualSalary = function(){
+               this.annualSalary = sal *12;
+               return this.annualSalary;
+           }
+       }
+        var oemp = new Emp("Lakshmi",8000)
+        //accessing public members
+        alert(oemp.annualSalary);
+        alert(oemp.calculateAnnualSalary());
+
+
+        //accessing private members
+        alert(oemp.sal);///getting undefined we accessing a variable outside of the scope
+    </script>
+</head>
+<body></body>
+</html>

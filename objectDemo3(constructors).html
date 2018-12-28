@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        //defining constructor function in traditional way of function
+        function emp(vempno,vename,vsal,vdept){
+            this.eno=vempno;
+            this.ename = vename;
+            this.sal = vsal;
+            this.deptno = vdept;
+            console.log(this);
+            
+            
+        }
+        //emp();
+        console.log(this);
+        //creating an instance for constructor function
+        var oemp = new emp(10001,"Lakshmi",20000,10);
+        alert(oemp.eno+","+oemp.ename+","+oemp.sal+","+oemp.deptno);
+
+
+        //for ..in
+
+        //for..in
+         for (var p in oemp){
+             alert(p + " = "+oemp[p]);
+         }
+
+         //by using with
+         function showEmp(o){
+             with(o){
+                 alert(eno+" , "+ename+" ,"+sal+", "+deptno);
+             }
+
+         }
+		 
+         showEmp(oemp);
+         
+       
+    </script>
+</head>
+<body></body>
+</html>

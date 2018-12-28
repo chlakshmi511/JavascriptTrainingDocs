@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      //first way object craetion and initialization using new keyword
+      var oemp1 =new Object();
+      oemp1.eno = 1001;
+      oemp1.ename = "Lakshmi";
+      oemp1.sal = 89000.00,
+      oemp1.deptno ="ui";
+      //alert(oemp1.eno + ","+oemp1.ename+","+oemp1.sal+","+oemp1.deptno);
+
+      //second way Object creation initialization using ObjectLiteral {}
+      var oemp2 ={};
+      oemp2.eno = 2001;
+      oemp2.ename = "Lakshmi_2";
+      oemp2.sal = 8977.00,
+      oemp2.deptno ="angular";
+      //alert(oemp2.eno + ","+oemp2.ename+","+oemp2.sal+","+oemp2.deptno);
+
+      //3rd way 
+      var oemp3 ={
+      eno : 3001,
+      ename : "Lakshmi_3 ",
+      sal : 8977.00,
+      deptno : "angular",
+      fullName : function(){
+          console.log(this.sal);
+      }
+
+      }
+        // alert(oemp3.eno + ","+oemp3.ename+","+oemp3.sal+","+oemp3.deptno);
+
+        //alert("array based notation result : "+oemp1["eno"]+","+oemp1["ename"]+","+oemp1["sal"]+","+oemp1["deptno"]);//array based notation
+       
+        //all the properties are fetched at one instance
+        var result =" ";
+        for(var p in oemp3){
+            result+= p + " = " + oemp3[p]+"\n";///oemp3["eno"]
+        }
+       // alert("3rd object"+result);//
+
+        alert("second Object"+Object.keys(oemp2));
+
+        var tempResult = "";
+        var ary = Object.keys(oemp3);
+        for(var j = 0;j<ary.length;j++){
+            tempResult+= "objects of "+ary[j] + "="+oemp3[ary[j]];//
+        }
+        alert(tempResult);
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
